@@ -7,12 +7,12 @@ using namespace std;
 
 int main()
 {
-	Dice diceObj;
+	Dice diceObj;		//creates a Dice object
 	
-	int arrayOfNum[10];
-	srand(time(NULL));
+	int arrayOfNum[10];	//creates an array of integers
+	srand(time(NULL));	
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i <	10; i++)	//populates array with random numbers
 	{
 		arrayOfNum[i] = rand() % 50 + 1;
 	}

@@ -1,21 +1,20 @@
 #include "Dice.h"
-#include <stdlib.h>
 #include <cstdlib>
 #include <ctime>
 
-
-Dice::Dice()
+Dice::Dice()		//default constructor
 {
 }
 
-int Dice::roll()
+int Dice::roll()		//This function generates a random number from 1-6 and returns the value
 {
 	srand(time(NULL));
 	return rand() % 6 + 1;
 }
 
-float Dice::average(Dice x, int number)
+float Dice::average(Dice x, int number)	//works out the average of dice rolls
 {
+	
 	float total = 0;
 	for (int i = 0; i < number; i++)
 	{
@@ -24,7 +23,7 @@ float Dice::average(Dice x, int number)
 	return float(total / number);
 }
 
-float Dice::average(int arr[], int number)
+float Dice::average(int arr[], int number)	//works out the average from an array of integers
 {
 	float total = 0;
 	for (int i = 0; i < number; i++)
